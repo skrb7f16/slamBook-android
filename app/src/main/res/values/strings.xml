@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Slam book</string>
+    <string name="welcome_message">Welcome to e-SlamBook</string>
+    <string name="Add">Add New</string>
+    <string name="view">View Previous</string>
+</resources>
+

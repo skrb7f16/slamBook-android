@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".adding">
+
+    <LinearLayout
+        android:id="@+id/SlamForm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Enter your Details here"
+            android:textColor="#040404"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/formName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Your Name"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/formNickName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="I call You"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/formAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="how many years old"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/formBday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Born on"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/formEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Your email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/fromPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Your Phone"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/formCrush"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="You had crush on"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/formHobbies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Your hobbies"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/formAim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="You wanna be a"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/formFirsthThought"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="What did you thought about me when you first saw me"
+            android:inputType="textMultiLine" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="addSlam"
+            android:text="Create"
+            android:textColor="#3A3232" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
