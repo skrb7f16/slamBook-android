@@ -6,40 +6,73 @@
     android:layout_height="match_parent"
     android:background="@drawable/gradient_toolbar"
     tools:context=".MainActivity">
-    <include layout="@layout/custom_toolbar"/>
+
     <TextView
         android:id="@+id/welcomeTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
-        android:fontFamily="sans-serif-black"
+        android:layout_marginTop="280dp"
+        android:fontFamily="@font/permanent_marker"
+        android:gravity="center"
         android:padding="10sp"
+        android:paddingBottom="0sp"
         android:text="@string/welcome_message"
-        android:textSize="24sp"
+        android:textColor="#fff"
+        android:textSize="36sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/welcomeTextView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/permanent_marker"
+        android:gravity="center"
+        android:padding="0sp"
+        android:paddingTop="0sp"
+        android:text="e-Slam"
+        android:textColor="#fff"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
+        app:layout_constraintVertical_bias="0.054" />
 
     <Button
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@color/start"
         android:onClick="addNew"
+        android:padding="5dp"
         android:text="@string/Add"
+        android:textColor="#fff"
+        android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/viewPrevious"
-        app:layout_constraintEnd_toEndOf="@+id/welcomeTextView"
-        app:layout_constraintStart_toStartOf="@+id/welcomeTextView"
-        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcomeTextView"
+        app:layout_constraintVertical_bias="0.857" />
 
     <Button
         android:id="@+id/viewPrevious"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="252dp"
+        android:layout_marginBottom="108dp"
+        android:background="@color/start"
         android:onClick="viewPrevious"
+        android:padding="5dp"
         android:text="@string/view"
+        android:textColor="#fff"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/addButton"
-        app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="@+id/addButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

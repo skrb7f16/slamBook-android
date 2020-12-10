@@ -5,12 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".adding">
-
+    <include layout="@layout/custom_toolbar" />
     <LinearLayout
         android:id="@+id/SlamForm"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="80dp"
         android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -37,7 +40,7 @@
 
         <EditText
             android:id="@+id/formNickName"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="I call You"
@@ -112,9 +115,10 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/start"
             android:onClick="addSlam"
             android:text="Create"
-            android:textColor="#3A3232" />
+            android:textColor="#fff" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

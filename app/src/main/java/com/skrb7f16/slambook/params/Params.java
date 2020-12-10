@@ -20,4 +20,7 @@ public class Params {
     public static final String KEY_AIM="aim";
 
 
+    public static final String NiCKNAME="";
+
+
 }

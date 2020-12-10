@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
 import com.skrb7f16.slambook.data.MyDBHandler;
 import com.skrb7f16.slambook.model.SlamBook;
-
+import androidx.appcompat.widget.Toolbar;
 public class slamShow extends AppCompatActivity {
     int idOfSlam;
     TextView name,nickName,age,email,hobby,firstThought,bday,phoneNo,crush,aim;
@@ -20,10 +21,15 @@ public class slamShow extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slam_show);
+        Toolbar toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitleTextColor(Color.WHITE);
         Intent intent=getIntent();
         String id=intent.getStringExtra("id");
         idOfSlam=Integer.parseInt(id);
         SlamBook slamBook=db.getSlamBook(idOfSlam);
+        getSupportActionBar().setTitle(slamBook.getNickName());
         setThings(name,R.id.nameValue,slamBook.getName());
         setThings(nickName,R.id.nickNameValue,slamBook.getNickName());
         setThings(age,R.id.ageValue,slamBook.getAge());
@@ -57,7 +63,7 @@ public class slamShow extends AppCompatActivity {
 
                     public void onClick(DialogInterface dialog, int whichButton) {
                         db.deleteSlamBook(idOfSlam);
-                        finish();
+                        finishActivity(100);
                         dialog.dismiss();
                     }
 

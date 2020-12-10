@@ -2,6 +2,7 @@ package com.skrb7f16.slambook;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
@@ -10,6 +11,8 @@ import android.widget.Toast;
 
 import com.skrb7f16.slambook.data.MyDBHandler;
 import com.skrb7f16.slambook.model.SlamBook;
+import androidx.appcompat.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
 
 public class adding extends AppCompatActivity {
     String name,nickName,age,email,hobby,firstThought,bday,phoneNo,crush,aim;
@@ -19,6 +22,10 @@ public class adding extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_adding);
+        Toolbar toolbar=findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
+        getSupportActionBar().setTitle("Adding");
     }
 
     public void addSlam(android.view.View view){
