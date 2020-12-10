@@ -1,28 +1,31 @@
 package com.skrb7f16.slambook;
 
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-
+import androidx.appcompat.widget.Toolbar;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.ListView;
 
 import com.skrb7f16.slambook.data.MyDBHandler;
-import com.skrb7f16.slambook.model.SlamBook;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setTitleTextColor(Color.WHITE);
         MyDBHandler db=new MyDBHandler(MainActivity.this);
     }
+
+
 
     public void addNew(android.view.View view){
         Intent intent=new Intent(MainActivity.this,adding.class);
