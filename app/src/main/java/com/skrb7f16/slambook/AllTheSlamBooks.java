@@ -41,7 +41,7 @@ public class AllTheSlamBooks extends AppCompatActivity {
             slams.add(slam.getNickName());
             ids.add(slam.getId());
         }
-        ArrayAdapter<String> arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,slams);
+        ArrayAdapter<String> arrayAdapter=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,slams);
         listView.setAdapter(arrayAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

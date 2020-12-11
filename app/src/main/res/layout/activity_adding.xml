@@ -115,10 +115,11 @@
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/start"
+            android:background="@drawable/round_button"
             android:onClick="addSlam"
             android:text="Create"
-            android:textColor="#fff" />
+            android:textColor="@color/end"
+            android:textSize="18sp" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
