@@ -78,4 +78,16 @@ public class slamShow extends AppCompatActivity {
 
         return myQuittingDialogBox;
     }
+
+    public void share(View view) {
+        SlamBook slamBook=db.getSlamBook(idOfSlam);
+        Intent intent= new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT,"Your Name is: \n"+slamBook.getName()+"\nI call You \n"+slamBook.getNickName()+"\nYou are this Old\n"+slamBook.getAge()
+            +"\nYour Crush is\n"+slamBook.getCrush()+"\nTo call You dial\n"+slamBook.getPhoneNo()+"\nYou were born on\n"+slamBook.getBday()+"\nTo email You @\n"+slamBook.getEmail()
+                +"\nYour Hobbies are\n"+slamBook.getHobby()+"\nYou wanna be\n"+slamBook.getAim()+"\nWhat do you think About me when we first met\n"+slamBook.getFirstThought()+"\n"
+        );
+        Intent chooser=Intent.createChooser(intent,"Share This Slam book by...");
+        startActivity(chooser);
+    }
 }
